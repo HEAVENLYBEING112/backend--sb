@@ -1,0 +1,254 @@
+BACKEND - 11/12/2025
+
+web client
+mobile client
+api clients - intermediatery
+iot clients
+
+server - one who responds to request
+       -> gives different kinds of information
+
+types of server
+
+->Application server 
+->Database server
+->Authentication server
+->Game server
+->Cloud server
+
+
+step1:- chrome -> http login -> login using a name and pass
+step2:- wireshark-> in search panel (adjacent to bookmark) -> search(http.request)
+
+http -> hyper text transfer protocol
+
+     ->it is a language of a tool that clients and server used to communicate through internet
+
+     -> http request contains http method , URL , header  + body
+
+Types of methods
+
+     -> get    -> to fetch the data
+        post   -> creating the data
+        put    -> update the data
+        delete -> to remove the data
+ 
+->URL -> Uniform Resource Locator (address of the resource you want to access)
+
+parts of URL(2 parts)
+
+->Base URL
+->Path
+
+Headers -> to help the server to understand the request
+
+->Content Type it tells the server what format you request (eg: sending json format)
+
+->User Agent tells the server which devise or browser is sending the request(mac or windows showing)
+
+->Body the request body is the main data you send to the server
+
+rules:-
+  
+    (1)-> client must always start the  communication
+   
+    (2)-> every http communication has 2 parts(displays website or 404 error)
+     
+    (3)-> http follows a fixed request structure
+  
+    (4)-> server must send a status code in every response
+
+    (5)-> user standard method ( get, post,...)
+   
+    (6)->URL must identify what you want
+   
+    (7)-> https straight less
+
+    (8)->data must be in text format
+
+    (9)-> client must specify data type
+
+    (10)-> http response must follow structure
+
+    (11)-> use of http version
+
+    (12)-> communication must follow ascii text encoding
+
+    (13)-> http can work over any media layer 
+
+    (14)-> http does not care about the device
+   
+    (15)-> 1.0,1.1,2,3 ->http versions
+
+TCP/UDP -> TCP-> doesn't' allow interrupts ask it to wait and retransmit
+
+UDP-> allow inturrupts but it dosent hear the signal
+
+json format -> java script object notation
+
+-> used to send data between client and server
+
+why json?
+
+-> easy to read 
+-> easy to write.
+-> light weight.
+-> represented using key value pair
+-> works in all programming languages
+
+response in json
+
+{
+    "flow_token": "g;176542895759639847:-1765429016611:OUV2MYZ2zMxu5Y30yfVBqTxl:8",
+    "status": "success",
+    "subtasks": [
+        {
+            "subtask_id": "LoginEnterPassword",
+            "enter_password": {
+                "primary_text": {
+                    "text": "Enter your password",
+                    "entities": []
+                },
+                "next_link": {
+                    "link_type": "task",
+                    "link_id": "next_link",
+                    "label": "Log in"
+                },
+                "hint": "Password",
+                "username": "qwertyu",
+                "user_identifier_display_type": "username",
+                "skip_password_validation": true,
+                "os_content_type": "password",
+                "footer": {
+                    "style": "fixed",
+                    "footnote_text": {
+                        "text": "Don't have an account? Sign up",
+                        "entities": [
+                            {
+                                "from_index": 23,
+                                "to_index": 30,
+                                "navigation_link": {
+                                    "link_type": "deep_link_and_abort",
+                                    "link_id": "signup_deep_link",
+                                    "url": "https://twitter.com/i/flow/signup"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "password_field": {
+                    "content_type": "password",
+                    "hint_text": "Password",
+                    "detail_text": {
+                        "text": "Forgot password?\t",
+                        "entities": [
+                            {
+                                "from_index": 0,
+                                "to_index": 16,
+                                "navigation_link": {
+                                    "link_type": "subtask",
+                                    "link_id": "forget_password",
+                                    "label": "Forgot password?",
+                                    "subtask_id": "RedirectToPasswordReset"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "subtask_back_navigation": "cancel_flow"
+        },
+        {
+            "subtask_id": "RedirectToPasswordReset",
+            "open_link": {
+                "link": {
+                    "link_type": "deep_link_and_abort",
+                    "link_id": "password_reset_deep_link",
+                    "url": "https://twitter.com/i/flow/password_reset?input_flow_data=%7B%22requested_variant%22%3A%22eyJ1c2VyX2lkZW50aWZpZXIiOiJxd2VydHl1IiwicGxhdGZvcm0iOiJSd2ViIn0%3D%22%7D"
+                }
+            }
+        }
+    ]
+}
+
+
+
+JSON format rules
+
+-> must start with "{"
+
+-> key must be in doublequotes("")
+
+-> values can be string , num , Boolean , array , obj , null
+
+-> data are separated by comma
+
+
+extensible markup language -- > it is a structured way of storing the data using tags(xml)
+
+-> xml can create thier own tags eg: <name>Surya</name>
+
+-> every xml file start with a single root element that wraps all data eg: <it>
+                                                                            <stud>
+                                                                             <stud1>Sharan</stud1>
+                                                                             <stud2>Sharif</stud2>
+                                                                             <stud3>Guru</stud3>
+                                                                            </stud>
+                                                                           </it>
+
+TOMCAT
+
+-> IT IS A webserver + java servlet container that runs java web application
+
+-> it accepts http requests 
+
+-> runs your java code
+
+-> sent that http response
+
+WHY TOMCAT?
+
+-> broweser speak http
+
+-> java application speak java code
+
+-> Tomcat acts like a translator
+
+-> coverts http into java calls
+
+-> Tom cat is the middle man that connects web request with java programs
+
+
+ARCHITECTURE
+
+-> catelina 
+
+-> coyota
+
+-> jasper (to convert .jsp file to java )
+
+
+BIN
+
+-> start & stop
+
+CONF
+
+-> configure files
+
+LIB
+
+-> contain java files
+
+LOG
+
+-> it stores the error that occurs in the system
+
+TEMP
+
+-> temporary storage
+
+WEBAPPS
+
+-> here is where we should do  all our coding and application (like reactapp folder)(deployment folder)
+
