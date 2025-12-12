@@ -1,0 +1,113 @@
+BACKTRACK - 12-12-2025
+
+SERVLET
+
+-> it is a java program that runs on a server and handles web request and web response 
+
+-> it is a java class that receives data from browser , process it and send back the response 
+
+
+NEED OF SERVLETS'
+
+-> login validation , database operations , calculations eg: when the user clicks login the form data goes to a servlet which checks the username or password and sends the output to the browser 
+
+-> normal java program --> it runs locally on your computer executed using java myprogram
+
+-> servlet it runs inside a web sever eg: Tomcat
+
+-> automatically executed when a browser sends a request
+
+-> inputs comes from http request html/JSON/xml send back to browser 
+
+HOW THEY RECEIVE THE INPUT
+
+-> scanner sc = new scanner(system.in);
+   int x = sc.nextInt();
+   /* input comes from the user through keyboard (to get query input) */
+
+-> in servlet --> it receives http request data :
+                                                  -> form data
+                                                  -> URL parameters
+                                                  -> cookies
+                                                  -> JSON body
+
+-> Stingname = request.getParameter("username"); /* get input in servlet */
+
+HOW THEY GIVE THE OUTPUT
+
+-> java -> you must run it manually 
+
+-> servlet -> it is never called manually it is always called by the server when a request comes eg: http:\\localhost:8080\login
+
+-> browser calls servlet --> tomcat executes it --> response goes back /* working path of servlet mechanism */
+
+-> response.getWriter().println("<h1>Hello user</h1>"); /* output is sent to the browser (chrome) */
+
+
+SERVLET API
+
+-> it is a set of interfaces and classes provided by java (Jakarta) which allows you to 
+                                                                                      1 -> create servlets (.java files)
+                                                                                      2 -> handles the http request
+                                                                                      3 -> read data send by the browser 
+                                                                                      4 -> sends the response back
+                                                                                      5 -> controls the servlet life cycle
+                                                                                      6 -> interacts with the server
+                                                                                      
+KEY INTERFACE AND CLASSES 
+
+-> httpServlet --- you overwrite doGet() --> fetch the data
+                                 doPut() --> update the data
+                                 doPost() --> create the data
+                                 doDelete() --> remove the data
+
+-> httpServletRequest --- used to read the data sent by the browser 
+                                                                 (1) -> form
+                                                                     -> query parameters
+                                                                     -> headers
+                                                                     -> cookies
+                                                                     eg: String name = request.getParameter("username");
+
+-> httpServletResponse --- used to send output to browser  eg: response.getWriter().println("login success");
+
+-> RequestDispatcher --- it is an object used to transfer the request from one servlet or jsp to another servlet or jsp and also it insert another page into the current response 
+
+SERVLET LIFE CYCLE
+
+-> a servlet goes through these phases 
+                                      (1)-> Load (container decides to load  the servlet)
+                                      (2)-> Instantiate (container creates one servlet object)
+                                      (3)-> Initialize (init (ServletConfig))-this is called once 
+                                      (4)-> ServRequest (service()-> doGet method / doPost method ...etc this is called per request many time multithreaded
+                                      (5)-> Destroy (destroy method() -> this is called once before the servlet is removed or unloaded
+                                      (6)-> Garbage Collection (after destroy)
+
+SERVLET PHASE 
+
+LOAD
+                                                                          
+-> tomcat loads the servlet class using JDM                                                                
+
+WHEN DOES IT HAPPEN
+
+-> configuration @WebServlet(value = "/login",loadOnStartup = 1)
+
+INSTANTIATE
+
+-> container uses new to create one instance of your servlet class                                          
+
+INITIALIZE 
+
+-> called once immediately after instantiation                                                             
+
+SERVICE
+
+-> called for every request                                                                                 
+
+DESTROY
+
+-> called once by the container when it decides to remove the servlet (server shutdown , reload)           
+
+GARBAGE COLLECTION
+
+-> JDM will eventually reclaim the servlet object memory                                       
