@@ -1,0 +1,71 @@
+BACKTRACK 15/12/2025
+
+SPRINGBOOT
+
+-> it is a java framework
+'
+-> it is an upgraded version of spring
+
+-> like a template in canva for resume it is a frame work 
+
+-> dependencies will be auto assigned in spring-boot and for spring we need to assign in manually
+
+-> to run tomcat in spring boot we just need a single command (mvn spring-boot:run) ---> command
+
+-> spring has 20-30 lines of code whereas same for spring boot only 3-4 lines
+
+-> microservice is supported by spring boot and not by spring
+
+-> 70% is servlet in spring but in spring boot it has maximum content of spring and also has own other information
+
+ANNOTATION
+
+-> annotation is a data which holds metadata
+
+-> initialized with @ symbol
+
+LAYERS
+
+(1)-> ENTITY -->  data (in a tabled structure as in DBMS)
+
+(2)-> REPOSITORY --> it has every command within itself so we just need to call (such as update ,  delete , select students from ...  etc...)
+
+(3)-> SERVICE --> logic of the program
+
+(4)-> CONTROLLERS --> to receive http request
+
+(5)-> DTO(DATA TRANSFER OBJECT) --> only required information will be extracted here
+
+(6)-> EXCEPTION
+
+(7)-> CONFIG
+
+(8)-> SECURITY --> give permissions to who should access the http request
+
+(9)-> IOC (INVERSION OF CONTROLL) --> an access all class with a single object
+
+(10)-> DEPENDENCY --> constraints are given automatically in spring boot
+
+
+request body --> used to convert json to java and vice versa
+
+HTTP STATUS CODE
+
+
+100 series --> uploading , continue uploading 
+
+200 series --> successfully completed response from server
+
+201 series --> created (create account --. account created response)
+
+202 series --> accepted (amount sent query accepted but processing)
+
+204 series --> Nocontent 
+
+300 series --> did you mean ? during web search (switching to correct server)
+
+400 series --> invalid response data 
+
+401 series --> login to download (login to access)
+
+404 series --> page not found
